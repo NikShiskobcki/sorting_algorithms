@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- *
- *
- *
+ * bubble_sort - bubble sort
+ * @array: array
+ * @size: size
  */
 void bubble_sort(int *array, size_t size)
 {
@@ -17,7 +17,7 @@ void bubble_sort(int *array, size_t size)
 			{
 				aux = array[y];
 				array[y] = array[y + 1];
-				array[y + 1] = aux;	
+				array[y + 1] = aux;
 				print_array(array, size);
 			}
 		}
