@@ -1,23 +1,26 @@
 #include "sort.h"
 
 /**
- *
- *
- *
+ * quick_sort - quick sort
+ * @array: array
+ * @size: size
  */
 void quick_sort(int *array, size_t size)
 {
-	
 	aux(array, size, 0, size - 1);
 }
 
 /**
- *
- *
+ * aux - aux function
+ * @array: array
+ * @size: size
+ * @low: low
+ * @high: high
  */
 void aux(int *array, size_t size, int low, int high)
 {
 	int x;
+
 	if (low < high)
 	{
 		x = lomutoPartition(array, size, low, high);
@@ -28,8 +31,12 @@ void aux(int *array, size_t size, int low, int high)
 }
 
 /**
- *
- *
+ * lomutoPartition - lomuto partition function
+ * @array: array
+ * @size: size
+ * @low: low
+ * @high: high
+ * Return: size
  */
 size_t lomutoPartition(int *array, size_t size, int low, int high)
 {
