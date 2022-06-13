@@ -1,8 +1,8 @@
 #include "sort.h"
 
 /**
- *
- *
+ * insertion_sort_list - insertion sort
+ * @list: list
  *
  */
 void insertion_sort_list(listint_t **list)
@@ -15,19 +15,20 @@ void insertion_sort_list(listint_t **list)
 		aux2 = aux->prev;
 		while (aux2 != NULL && aux->n < aux2->n)
 		{
-			aux3= aux2->prev;
+			aux3 = aux2->prev;
 			swap(aux, aux2, list);
 			aux2 = aux3;
 			print_list(*list);
 		}
-	aux = aux->next;
+		aux = aux->next;
 	}
 }
 
 /**
- *
- *
- *
+ * swap - swap
+ * @actual: actual
+ * @previous: prev
+ * @list: list
  */
 void swap(listint_t *actual, listint_t *previous, listint_t **list)
 {
