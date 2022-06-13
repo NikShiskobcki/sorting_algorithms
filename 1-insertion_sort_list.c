@@ -36,24 +36,19 @@ void swap(listint_t *actual, listint_t *previous, listint_t **list)
 
 	Naux = actual->next;
 	PPAux = previous->prev;
-
 	actual->next = previous;
 	previous->next = Naux;
 	actual->prev = previous->prev;
-
 	if (Naux != NULL)
 		Naux->prev = previous;
-
-	/*previous->prev = actual;*/
 	if (PPAux != NULL)
 	{
 		previous->prev->next = actual;
 		previous->prev = actual;
 	}
 	else
-	{
 		*list = actual;
-	}
 	if (actual->prev == NULL)
 		*list = actual;
+
 }
